@@ -1,13 +1,13 @@
-#  _{title}_
+#  _Roman Numeral Generator_
 
-#### _{brief desc}_
-##### __Created:__ 5/29/2020
-##### __Last Updated:__ 6/3/2020 
-##### By _**Tyson Lackey**_  
+#### _Converts user number to roman numerals_
+##### __Created:__ 6/11/2020
+##### __Last Updated:__ 6/11/2020 
+##### By _**Tyson Lackey, Kate Skorija, Erich Richter**_  
 
 ## Description
 
-_{detailed desc}_
+_Takes a user inputed number between 1-3999. Based on the behavior logic bellow, it converts the number to roman numeral notation and returns the text_
 
 ## Behaviors
 
@@ -35,20 +35,19 @@ _{detailed desc}_
 ##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open via Bash/GitBash:
 
 1. Clone this repository onto your computer:
-    "git clone {github repo URL}"
-2. Navigate into the "{project name}" directory in Visual Studio Code or preferred text editor:
-3. Open the projec
+    "git clone https://github.com/Lackeyt/roman-numerals"
+2. Navigate into the "roman-numeral" directory in Visual Studio Code or preferred text editor:
+3. Open the project
     "code ."
 3. Open index.html in your browser:
     "open index.html"
 
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;View Directly in your Browser:
-
-* Navigate to {GH Pages URL} in your web browser.
 
 ## Known Bugs
 
-* n/a
+* Does not currently error handle non-integer inputs
+* Does not currently error handle integers entered that are not between 1-3999
+* Currently does not contain custom CSS styling and minimal bootstrap defaults
 
 ## Support and contact details
 

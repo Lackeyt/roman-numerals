@@ -1,56 +1,26 @@
 $(document).ready(function() {
 //Business Logic
-
-function intArray(int){
-	let arrayTemp = []
-  let intLength = (int - 5)
-	if (int === "9") {
-  	arrayTemp.push("1", "10")
-  } else if (int >= 5) {
-  	arrayTemp.push("5")
-  	for (i=0; intLength>0; intLength-1){
-    arrayTemp.push("1")
-    intLength -= 1
-    }
-  } else if (int === "4"){
-		arrayTemp.push("1", "5")   	
-  } else if (int < 4) {
-   	for (i=0; intLength>0; intLength-1){
-    arrayTemp.push("1")
-    intLength -= 1
-    };
-  };
-  return arrayTemp
-};
-
-console.log(intArray("3")) 
-
 // constructs integer into roman numberal notation array
-  function arrayBuilder(int) {
+  function arrayBuilder(int){
     let array = []
+    let intLength = (int - 5)
     if (int === "9") {
       array.push("1", "10")
-    } else if (int >= 5 && int < 9) {
+    } else if (int >= 5) {
       array.push("5")
-      if (int - 5 === 3){
-        array.push("1", "1", "1")
-      } else if (int - 5 === 2){
-        array.push("1", "1")
-      } else if (int - 5 === 1) {
-        array.push("1")
-      };
+      for (i=0; intLength>0; intLength-1){
+      array.push("1")
+      intLength -= 1
+      }
     } else if (int === "4"){
-      array.push("1", "5")
+      array.push("1", "5")   	
     } else if (int < 4) {
-      if (int === "3"){
-        array.push("1", "1", "1")
-      } else if (int === "2"){
-        array.push("1", "1")
-      } else if (int === "1") {
-        array.push("1")
+      for (i=0; intLength>0; intLength-1){
+      array.push("1")
+      intLength -= 1
       };
     };
-    return array;
+    return array
   };
 
 //converts array of integers into roman numeral values
