@@ -1,24 +1,31 @@
 $(document).ready(function() {
 //Business Logic
 // constructs integer into roman numberal notation array
-  function arrayBuilder(int){
+  function arrayBuilder(string){
     let array = []
-    let intLength = (int - 5)
-    if (int === "9") {
+    let int = parseInt(string)
+
+    if (int === 9) {
       array.push("1", "10")
-    } else if (int >= 5) {
+    } else if (int < 9 && int >= 5) {
       array.push("5")
-      for (i=0; intLength>0; intLength-1){
-      array.push("1")
-      intLength -= 1
+      if (int ===8){
+        array.push("1", "1", "1")
+      } else if (int === 7) {
+        array.push("1","1")
+      } else if (int === 6){
+        array.push("1")
       }
-    } else if (int === "4"){
+    } else if (int === 4){
       array.push("1", "5")   	
     } else if (int < 4) {
-      for (i=0; intLength>0; intLength-1){
-      array.push("1")
-      intLength -= 1
-      };
+      if (int ===3){
+        array.push("1", "1", "1")
+      } else if (int === 2) {
+        array.push("1","1")
+      } else if (int === 1){
+        array.push("1")
+      }
     };
     return array
   };
@@ -52,7 +59,8 @@ $(document).ready(function() {
     let tensArray = [];
     let hundredsArray = [];
     let thousandsArray = [];
-    posCount = 0;
+    let posCount = 0;
+
     for (i=int.length - 1; i >= 0; i--){
       if (posCount === 0) {
         onesArray = arrayBuilder(int[i]);
