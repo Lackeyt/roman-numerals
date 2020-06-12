@@ -7,26 +7,22 @@ $(document).ready(function() {
 
     if (int === 9) {
       array.push("1", "10")
-    } else if (int < 9 && int >= 5) {
+  } else if (int >= 5) {
       array.push("5")
-      if (int ===8){
-        array.push("1", "1", "1")
-      } else if (int === 7) {
-        array.push("1","1")
-      } else if (int === 6){
+      let intLength = int - 5
+      while (intLength > 0){
         array.push("1")
+        intLength -= 1
       }
-    } else if (int === 4){
-      array.push("1", "5")   	
-    } else if (int < 4) {
-      if (int ===3){
-        array.push("1", "1", "1")
-      } else if (int === 2) {
-        array.push("1","1")
-      } else if (int === 1){
+  } else if (int === 4){
+      array.push("1", "5")       
+  } else if (int < 4) {
+      let intLength = int
+      while (intLength > 0){
         array.push("1")
-      }
-    };
+        intLength -= 1
+      };
+  };
     return array
   };
 
